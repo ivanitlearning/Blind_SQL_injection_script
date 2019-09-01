@@ -2,7 +2,7 @@
 This is a Bash script which automates blind SQL injections by testing characters: `{0..9} {A..z} . .. ; : - _ @`
 It was written and tested based on this [PentesterLab course](https://pentesterlab.com/exercises/from_sqli_to_shell/course) which actually supports in-band SQL injection which is highly preferable to blind SQLIs. However, this was written for the sake of learning how to automate blind SQL injections, since all in-band SQLIs can be treated as blind SQL injections but not vice versa.
 
-Previously I used a similar script but for an eLS PTP lab. Since that lab is not open to the public and I haven't found a free one publicly available, this will do.
+Previously I used a similar script but for an eLS PTP lab. Since that lab is not open to the public and I haven't found a free one publicly available, this will do. This script was not originally written by me, I used [this for reference](https://github.com/chilico/SQLblind) which itself appeared to be copied from eLS's PTP course on Web app pentesting.
 
 ## Important:
 This script requires heavy editing. You have to use Burpsuite to test the SQLI parameters, then copy as `curl`, replace the curl syntax in this script, together with `$URL`, `$truestring`.
