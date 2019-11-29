@@ -46,7 +46,7 @@ Results: PENTESTERLAB@LOCALHOST
 
 ```
 ## Output for JS script
-I've also translated it into AJAX Javascript which can be run on the browser console. This obviates the need to login and authenticate by shell. Tested on Chrome console.
+I've also translated it into AJAX Javascript which can be run on the browser console. This obviates the need to login and authenticate by shell. Tested on Chrome 78 console.
 ```
 Extracting results from query system_user()...
 Character number 1 found: p
